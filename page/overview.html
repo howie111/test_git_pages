@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="../js/app.js" type="text/javascript"></script>
+        <script src="../js/functions.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-default navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="overview.html" > Journal </a>
+                  </div>
+                  <div class="nav navbar-nav">
+                    <li><a href="../welcome.html">Home</a><li>
+                    <li><a href="create.html">Create</a><li>
+                    <li><a href="search.html">Search</a></li>
+                    <li><a href="overview.html">Overview</a></li>               
+                   </div>
+                </div>    
+            </nav>
+        </header>
+
+        <div id ="overviewcontainer">
+            
+            <div class="col-md-4" id ="indexcontainer">
+                <h3 class="text-center">Entry Index</h3>
+                <ul id="lists">
+                </ul>
+            </div>
+
+            <div class="col-md-8" id = "entriescontent">
+
+            </div>
+
+    <!-- modal for edit view -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                <!-- modal content -->
+                    <div class="modal-content">
+                        <form class ="modalform">
+                            <div class="form-group">
+                                <label>Title:</label>
+                                <input class="form-control" id="edited_title" placeholder="Title">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Author:</label>
+                                <input class="form-control" id="edited_author" placeholder="Author">
+                            </div>
+                            <div class="form-group">
+                                <label>Content:</label>
+                                <textarea class="form-control" rows = "8" id="edited_content" placeholder="Content"></textarea>
+                            </div> 
+                            <div class="form-group">
+                                <label>Tags:</label>
+                                <input class="form-control" id="edited_tags" placeholder="Tags are seperated by commas.">
+                            </div>      
+
+                        <!--  <button type="submit" class="btn btn-default" id="btn_save_new"> Save </button>   -->
+                        <div class="btn-container">
+                        <input type="submit" value="Save" class = "btn btn-success btn-save"id="edited_btn_save">
+                        <input type="reset" value="Reset" class = "btn btn-success btn-reset" id="edited_btn_reset">
+                        <input type="button" value="Close" class = "btn btn-success btn-close" >
+
+                        </div>       
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+   <!--Modal for "create new entry" when there is no entry  -->
+           <div class="modal fade" id="reminderModal" role="dialog">
+                <div class="modal-dialog modal-md">
+                <!-- modal content -->
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                       <h3>There is no entry, Please create new entry.</h3>
+                        </div>
+                        <!--  <button type="submit" class="btn btn-default" id="btn_save_new"> Save </button>   -->
+                        <div class="btn-container">
+                        <a href="create.html" class = "btn btn-success">Create it</a>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+    
+
+        </div>
+
+    
+
+
+
+        
+
+
+
+
+
+
+    
+    </body>
+</html>
